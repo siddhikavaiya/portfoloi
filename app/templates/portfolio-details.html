@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="section-counter paralax-mf bg-image"
+  style="background-image: url({% static 'assets/img/2.png' %})">
+ 
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+
+      </div>
+    </div>
+  </div>
+
+
+
+<main id="main">
+  
+  <!-- ======= Portfolio Details Section ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-8">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+
+              <div class="swiper-slide">
+                <img src="{{prod.img1.url}}" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="{{prod.img2.url}}" alt="">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="{{prod.img3.url}}" alt="">
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="portfolio-description">
+            <h2>{{prod.p_name}}</h2>
+            <p>
+              {{prod.p_disc}}
+            </p>
+          </div>
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: {{prod.p_type}}</li>
+              <li><strong>Project Developed in</strong>: {{prod.p_lang}}</li>
+              <li><strong>Project URL</strong>: <a href="{{prod.p_url}}">{{prod.p_url}}</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->
+</div>
+<!-- ======= Footer ======= -->
+
+{% endblock body %}
